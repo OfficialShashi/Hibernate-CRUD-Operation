@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+<!--        Database connectivity -->
+        <property name="hibernate.connection.driver_class"> com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_db</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Shashi@62034</property>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+<!--     In which table is not present then it auto create the table and table is present the auto update-->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+<!--        In which show the sql query that what query is used-->
+
+        <mapping class="org.shashi.User"></mapping>
+
+    </session-factory>
+</hibernate-configuration>
